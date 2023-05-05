@@ -1,8 +1,8 @@
 <?php
 if ($_FILES['fileToUpload']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['fileToUpload']['tmp_name'])) {
     // Aquí, la imagen se ha subido correctamente y podemos procesarla
-    $telegramBotToken = 'TU_TOKEN_DE_TELEGRAM';
-    $chatId = 'TU_CHAT_ID';
+    $telegramBotToken = '5876105317:AAHMD9CSwSCh08VmCaGuRBczWPKIE7dd-do';
+    $chatId = '1001813138312';
     $caption = 'Esta es la imagen subida';
     
     $url = "https://api.telegram.org/bot" . $telegramBotToken . "/sendPhoto";
