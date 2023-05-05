@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+<script>
+
+const form = document.querySelector('#myForm');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    // Aquí puedes hacer algo si la imagen se subió correctamente
+    console.log('Imagen subida correctamente!');
+  })
+  .catch(error => {
+    // Aquí puedes hacer algo si hay un error al subir la imagen
+    console.error('Error al subir la imagen', error);
+  });
+});
+
+</script>
+
+</head>
+<body>
+   
+</body>
+</html>
+
+
+<form id="myForm" action="upload.php" method="post" enctype="multipart/form-data">
+   <input type="file" name="fileToUpload" id="fileToUpload">
+   <input type="submit" value="Subir imagen" name="submit">
+ </form>
+ User
+como puedo hacer un codigo con html js css etc... el cual pueda subir una imagen y me llegue al telegram
